@@ -6,7 +6,9 @@
   <meta name="description" content="The professional portfolio of Kaylene Williams, project professional and MSc Computer Science with Artificial Intelligence student.">
   <title>Kaylene Williams | Portfolio</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
+
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
@@ -64,8 +66,8 @@
       <div class="two-column">
         <div>
           <p>
-            My background spans project coordination, operations, business support and education.
-            I currently support projects in the pharmaceutical and clinical-trials sector, where
+            My background spans project management, operations, business support and education.
+            I currently support projects in the pharmaceutical packaging and clinical-trials sector, where
             accuracy, communication and controlled processes matter every day.
           </p>
           <p>
@@ -73,6 +75,46 @@
             Intelligence. I created this portfolio to show not only finished work, but also how my
             thinking, technical ability and confidence develop throughout the degree.
           </p>
+
+          <button
+    id="about-toggle"
+    class="button button-primary"
+    type="button"
+    aria-expanded="false"
+    aria-controls="about-extra">
+    Show more about me
+  </button>
+
+  <div id="about-extra" hidden>
+    <p>
+  I enjoy finding ways to make things work better, whether that
+  means organising a project, untangling a process or finding
+  a clearer way to share information. My professional experience
+  has made me curious about how technology could help with the
+  everyday challenges people face at work.
+</p>
+
+<p>
+  Studying Computer Science with AI is giving me the opportunity
+  to turn that curiosity into practical skills. I am particularly
+  interested in how software, data and AI can reduce repetitive
+  tasks and give people more time to focus on work that needs
+  their judgement and expertise.
+</p>
+
+<p>
+  I would like to build on my experience and knowledge to create solutions that help people
+  rather than leave it behind. This portfolio is a space to
+  share that progression: what I am learning, what I can create
+  and how I can apply it. I am proud of where I have started,
+  and excited to see where these skills take me.
+</p>
+  </div>
+
+</div>
+
+<div class="highlight-card">
+
         </div>
         <div class="highlight-card">
           <h3>What I bring</h3>
@@ -106,6 +148,31 @@
         </article>
       </div>
     </section>
+
+    <section class="section" aria-labelledby="explore-heading">
+  <div class="section-heading">
+    <p class="eyebrow">Explore my skills</p>
+    <h2 id="explore-heading">What would you like to know more about?</h2>
+  </div>
+
+  <form id="skills-form">
+    <label for="skill-choice">Choose an area:</label>
+   <select id="skill-choice" name="skill" required>
+    <option value="">Select an area</option>
+    <option value="delivery">Project coordination and delivery</option>
+    <option value="communication">Client and stakeholder communication</option>
+    <option value="improvement">Process improvement</option>
+    <option value="quality">Documentation and quality</option>
+    <option value="web">Web development</option>
+    <option value="python">Python and problem-solving</option>
+    <option value="data">Data and SQL</option>
+    <option value="organisation">Organisation and prioritisation</option>
+</select>
+    <button class="button button-primary" type="submit">Show me</button>
+  </form>
+
+  <p id="skill-result" aria-live="polite"></p>
+</section>
 
     <section class="section callout" aria-labelledby="contact-heading">
       <div>
