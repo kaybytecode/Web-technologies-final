@@ -56,3 +56,29 @@ if (aboutButton && aboutExtra) {
 
   aboutButton.addEventListener("click", toggleAbout);
 }
+const githubButton = document.getElementById("github-button");
+const githubResult = document.getElementById("github-result");
+
+if (githubButton && githubResult) {
+  githubButton.addEventListener("click", async function () {
+    githubResult.textContent = "Loading...";
+
+    try {
+      const response = await fetch(
+        "https://api.github.com/users/kaybytecode"
+      );
+
+      if (!response.ok) {
+        throw new Error("Unable to load profile.");
+      }
+
+      const profile = await response.json();
+
+      githubResult.textContent =
+        "GitHub profile: " + (profile.name || profile.login);
+    } catch (error) {
+      githubResult.textContent =
+        "Sorry, the profile could not be loaded. Please try again.";
+    }
+  });
+}
